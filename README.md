@@ -2,24 +2,24 @@
 How To Run an Avail Validator (Kate Testnet)
 
 # Install Dependencies
-`sudo apt update`
+```sudo apt update```
 
 # Create Avail File
 ## Go To Parent Directory
-`cd ..`
+```cd ..```
 
 ## Create Avail File in home Directory
-`sudo mkdir /home/avail/avail-node/`
+```sudo mkdir /home/avail/avail-node/```
 
 ## Go To Avail File You Created
-`cd /home/avail/avail-node/`
+```cd /home/avail/avail-node/```
 
 # Download The Required Files
-`wget https://github.com/availproject/avail/releases/download/v1.6.3/data-avail-linux-amd64.tar.gz`
-`wget https://availproject.github.io/assets/files/chainspec.raw-1905ee8ba4620c9cd6f1f378a84346eb.json`
+```wget https://github.com/availproject/avail/releases/download/v1.6.3/data-avail-linux-amd64.tar.gz```
+```wget https://availproject.github.io/assets/files/chainspec.raw-1905ee8ba4620c9cd6f1f378a84346eb.json```
 
 # Extract File
-`tar xvzf data-avail-linux-amd64.tar.gz`
+```tar xvzf data-avail-linux-amd64.tar.gz```
 
 ## Run Your Node As a Service 
 You need to set name to your node in this command 
@@ -43,17 +43,19 @@ EOF
 ```
 
 # Enable Autostart of Your Node
-`sudo systemctl daemon-reload
-sudo systemctl enable availd.service `
+```
+sudo systemctl daemon-reload
+sudo systemctl enable availd.service
+```
 
 # Start Node
-`sudo systemctl start availd.service `
+```sudo systemctl start availd.service```
 
 # Check Node Status
-`sudo systemctl status availd.service`
+```sudo systemctl status availd.service```
 
 # Check Logs
-`journalctl -f -u availd.service`
+```journalctl -f -u availd.service```
 
 # Stake Tokens
 Create 2 accounts `stash` and `controller` on https://kate.avail.tools/
@@ -73,7 +75,7 @@ wait for the node to sync
 Once your node is synced
 
 ## Generate Session key
-`curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933`
+```curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933```
 
 ## Submit Session Key
 Go to Network → Staking again, Ensure you are on Account actions, and enter session key
