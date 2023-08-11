@@ -2,11 +2,11 @@
 How To Run an Avail Validator (Kate Testnet)
 
 # Install Dependencies
-'sudo apt update'
+`sudo apt update`
 
 # Create Avail File
 ## Go To Parent Directory
-'cd ..'
+`cd ..`
 
 ## Create Avail File in home Directory
 'mkdir /home/avail/avail-node/'
