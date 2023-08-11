@@ -9,7 +9,7 @@ How To Run an Avail Validator (Kate Testnet)
 `cd ..`
 
 ## Create Avail File in home Directory
-`mkdir /home/avail/avail-node/`
+`sudo mkdir /home/avail/avail-node/`
 
 ## Go To Avail File You Created
 `cd /home/avail/avail-node/`
@@ -23,7 +23,8 @@ How To Run an Avail Validator (Kate Testnet)
 
 ## Run Your Node As a Service 
 You need to set name to your node in this command 
-``sudo tee /etc/systemd/system/availd.service > /dev/null <<'EOF'
+```
+sudo tee /etc/systemd/system/availd.service > /dev/null <<'EOF'
 [Unit]
 Description=Avail Validator
 After=network.target
@@ -38,7 +39,8 @@ ExecStart=/home/avail/avail-node/data-avail --base-path /home/avail/avail-node/d
 
 [Install]
 WantedBy=multi-user.target
-EOF```
+EOF
+```
 
 # Enable Autostart of Your Node
 `sudo systemctl daemon-reload
