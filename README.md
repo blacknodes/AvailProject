@@ -16,6 +16,7 @@ How To Run an Avail Validator (Kate Testnet)
 
 # Download The Required Files
 ```wget https://github.com/availproject/avail/releases/download/v1.6.3/data-avail-linux-amd64.tar.gz```
+
 ```wget https://availproject.github.io/assets/files/chainspec.raw-1905ee8ba4620c9cd6f1f378a84346eb.json```
 
 # Extract File
